@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+interface description {
+  title: string;
+  name: string;
+}
 interface Card {
   title: string;
-  description: object;
+  description: description;
   cta: string;
   thumbnail: string;
 }
@@ -13,8 +16,8 @@ const cards: Card[] = [
   {
     title: "LinkedIn",
     description: {
-      Title: "LinkedIn profile",
-      Name: "Shilpa mulge",
+      title: "LinkedIn profile",
+      name: "Shilpa mulge",
     },
     cta: "https://www.linkedin.com/in/shilpa-mulge-5b271a11a/",
     thumbnail: "/linkedin.png",
@@ -22,8 +25,8 @@ const cards: Card[] = [
   {
     title: "GitHub",
     description: {
-      Title: "Github Profile",
-      Name: "Shilpa mulge",
+      title: "Github Profile",
+      name: "Shilpa mulge",
     },
     cta: "https://github.com/shilpa-mulge",
     thumbnail: "/github.png",
@@ -31,8 +34,8 @@ const cards: Card[] = [
   {
     title: "LeetCode",
     description: {
-      Title: "LeetCode Profile",
-      Name: "Shilpa mulge",
+      title: "LeetCode Profile",
+      name: "Shilpa mulge",
     },
     cta: "https://leetcode.com/mulgeshilpa/",
     thumbnail: "/leetcode.png",
@@ -80,9 +83,9 @@ const CardPage: React.FC = () => {
             <h2 className="text-5xl ">{selectedCard.title}</h2>
             <hr />
             <h1 className=" font-semibold mt-2">
-              {selectedCard.description.Name}
+              {selectedCard.description.name}
             </h1>
-            <p className="mt-4">{selectedCard.description.Title}</p>
+            <p className="mt-4">{selectedCard.description.title}</p>
 
             <Image
               src={selectedCard.thumbnail}
