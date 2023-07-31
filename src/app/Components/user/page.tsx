@@ -13,7 +13,7 @@ const Profile = ({ user }: { user: DefaultSession["user"] }) => {
       <h6 className=" font-bold mt-4">Profile:</h6>
       <p>Email: {user?.email}</p>
       <p>Phone Number:8605592943</p>
-      <p>Adress: Gyndore's House Chitta Wadi</p>
+      <p>Adress: Gyndore&apos;s House Chitta Wadi</p>
       <p>District: Bidar</p>
       <p>State: karnataka</p>
     </div>
