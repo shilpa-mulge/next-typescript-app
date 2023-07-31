@@ -1,7 +1,7 @@
 "use client";
 import { useSession, signIn, signOut } from "next-auth/react";
-import Profile from "./Components/user/page";
 import CardPage from "./Components/Card/page";
+import { CgProfile } from "react-icons/cg";
 export const Login: React.FC = () => {
   //get session from nextAuth
   const { data: session } = useSession();
@@ -26,7 +26,21 @@ export const Login: React.FC = () => {
           </div>
           <div className="flex flex-row justify-between min-[320px]:h-fit ">
             <CardPage />
-            <Profile user={session?.user} />
+            {/*  userProfile */}
+            <div className=" w-1/4 bg-slate-400 p-5 min-[320px]:w-fit ">
+              <div className="flex justify-center">
+                <CgProfile size={100} center />
+              </div>
+
+              <h1 className="text-center mt-5"> {session.user?.name}</h1>
+              <hr />
+              <h6 className=" font-bold mt-4">Profile:</h6>
+              <p>Email: {session.user?.email}</p>
+              <p>Phone Number:8605592943</p>
+              <p>Adress: Gyndore&apos;s House Chitta Wadi</p>
+              <p>District: Bidar</p>
+              <p>State: karnataka</p>
+            </div>
           </div>
         </div>
       </>
