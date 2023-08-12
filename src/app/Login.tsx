@@ -59,7 +59,7 @@ export const Login: React.FC = () => {
   if (session) {
     return (
       <>
-        <div className="h-screen min-[320px]:h-fit w-fit">
+        <div className="h-screen min-[320px]:h-fit w-full">
           <div className="bg-gray-800 py-4 px-6 flex justify-between items-center ">
             <div className="text-white font-bold text-xl">WELCOME</div>
             <div>
